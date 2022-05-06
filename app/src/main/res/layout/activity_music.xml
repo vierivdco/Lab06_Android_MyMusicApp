@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:backgroundTint="@color/black">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/picture_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_artist_1"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/teal_700"/>
+
+        <RelativeLayout
+            android:id="@+id/musicData"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/picture_image">
+
+            <TextView
+                android:id="@+id/nameMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Musica"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nameArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameMusic"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="5dp"
+                android:text="Artista"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/nameGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameArtist"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="5dp"
+                android:text="Genero"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/musicData"
+            android:layout_centerVertical="true"
+            >
+
+            <RelativeLayout
+                android:id="@+id/mediaButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                >
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/picturePlay"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_play_button"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="2dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/picturePause"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toEndOf="@+id/picturePlay"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_pause_button"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="#FF000000"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/pictureShare"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/picturePause"
+                        android:src="@drawable/ic_share_button_1"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/pictureLike"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/pictureShare"
+                        android:src="@drawable/ic_like_button"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mediaButtons">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/pictureStar"
+                    android:visibility="gone"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_star"
+                    app:civ_border_width="2dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
